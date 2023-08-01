@@ -1,0 +1,475 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.headForContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 5px 20px 5px;
+}
+.headForContent h2 {
+  border-bottom: 1px solid #000;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rebeccapurple;
+}
+
+.mainContainer {
+  height: 46.2rem;
+  background: radial-gradient(rgb(111, 165, 183), #fff);
+  background-color: blueviolet;
+  margin-top: 0px;
+}
+
+.HeadLogoNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  border-bottom: 1px solid blueviolet;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 1;
+  background: rgb(111, 165, 183);
+}
+.HeadLogoNav .head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HeadLogoNav .head h1:nth-child(1) {
+  font-family: sans-serif;
+}
+.HeadLogoNav .head h1:nth-child(2) {
+  color: #fff;
+  font-family: sans-serif;
+}
+.HeadLogoNav .navBar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HeadLogoNav .navBar ul li {
+  list-style: none;
+  margin: 0px 15px;
+}
+.HeadLogoNav .navBar ul a {
+  text-decoration: none;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+.HeadLogoNav .navBar ul a:hover {
+  color: blueviolet;
+  font-weight: bold;
+}
+
+.sentencePhoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 105px;
+  padding-top: 150px;
+}
+
+.sentence {
+  padding: 10px;
+}
+.sentence .p1 {
+  font-family: sans-serif;
+}
+.sentence h1 {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  color: rebeccapurple;
+  margin: 5px 3px;
+}
+.sentence .p2 {
+  font-size: 1.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 3px 2px;
+}
+.sentence .p2 strong {
+  font-size: 2rem;
+  -webkit-text-decoration: underline rebeccapurple 1.5px;
+          text-decoration: underline rebeccapurple 1.5px;
+}
+.sentence .p3 {
+  color: rgb(58, 56, 56);
+  font-size: 1.3rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+}
+.sentence .aboutCV {
+  margin: 5px 2px;
+  display: flex;
+  gap: 5px;
+}
+.sentence .aboutCV button {
+  padding: 5px 10px;
+  border-radius: 1px;
+  border: 1px solid;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+.sentence .aboutCV button:hover {
+  background-color: rebeccapurple;
+  color: #fff;
+}
+.sentence .aboutCV .cvlink {
+  text-decoration: none;
+  color: #000;
+  padding: 2px 10px;
+  font-family: sans-serif;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: background-color 0.5s ease-in-out;
+}
+.sentence .aboutCV .cvlink:hover {
+  background-color: rebeccapurple;
+  color: #fff;
+}
+
+.MyImg {
+  width: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid rebeccapurple;
+}
+.MyImg img {
+  width: 100%;
+  transform: scale(1.5);
+}
+
+.HeadLogoNav .menu,
+.navBar .close {
+  display: none;
+}
+
+/* My Projects */
+.projectMain {
+  height: 37rem;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  margin-top: 80px;
+}
+.project .icon span {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.projectUl::-webkit-scrollbar {
+  width: 0px;
+}
+
+.projectUl {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+.projectUl .tab {
+  margin: 5px 10px;
+  min-height: 20rem;
+  border: 1px solid rebeccapurple;
+  padding: 5px;
+  border-radius: 8px;
+}
+.projectUl .tab .Image {
+  width: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.562);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projectUl .tab .Image img {
+  width: 100%;
+  border-radius: 8px;
+}
+.projectUl .tab .titleP {
+  text-align: center;
+  margin: 10px 2px;
+  font-size: 1.5rem;
+}
+.projectUl .tab .aBtnP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  margin: 5px 2px;
+}
+.projectUl .tab .aBtnP a {
+  text-decoration: none;
+  border: 1px solid #000;
+  border-radius: 2px;
+  padding: 3px 6px;
+  color: #000;
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+}
+.projectUl .tab .aBtnP a:hover {
+  background-color: rebeccapurple;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.projectUl .tab .discription {
+  margin-top: 10px;
+}
+
+.projectUl.dragging {
+  scroll-behavior: auto;
+  cursor: grab;
+}
+
+.projectUl.dragging .tab {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+/* My Skills */
+.SkillsMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 30rem;
+  background-color: rgb(111, 165, 183);
+}
+.SkillsMain .imageSkill {
+  width: 160px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 10px;
+  background: rgba(255, 255, 255, 0.4941176471);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1450980392);
+  border-radius: 8px;
+}
+.SkillsMain img {
+  margin: 2px 20px;
+  width: 130px;
+  padding: 5px 10px;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: 1.5s ease-in-out;
+}
+
+.imageSkill:nth-child(1) {
+  transition-delay: 200ms;
+}
+.imageSkill:nth-child(2) {
+  transition-delay: 400ms;
+}
+.imageSkill:nth-child(3) {
+  transition-delay: 600ms;
+}
+.imageSkill:nth-child(4) {
+  transition-delay: 800ms;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/* About Me */
+.AboutMeMain {
+  margin-top: 35px;
+  min-height: 35rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AboutMeMain .AboutMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 85px;
+  margin-right: 85px;
+}
+.AboutMeMain .AboutMe .aboutImage {
+  margin-right: 15px;
+}
+.AboutMeMain .AboutMe .aboutImage img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px gray;
+}
+.AboutMeMain .AboutMe .aboutDiscripton {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+/* footer */
+.footerMain {
+  min-height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-color: rgba(145, 179, 179, 0.308);
+}
+.footerMain .contacticons {
+  margin: 10px 2px;
+  display: flex;
+}
+.footerMain .contacticons a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.9rem;
+  margin: 2px 6px;
+  padding: 2px 5px;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.footerMain .contacticons a:hover {
+  background-color: lightblue;
+  color: #000;
+}
+.footerMain .email,
+.footerMain .Thanks {
+  margin: 5px 10px;
+  font-size: 1.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/*--------------- Media Query For small devices ---------------*/
+@media screen and (max-width: 850px) {
+  .mainContainer {
+    width: 100%;
+    height: 100vh;
+  }
+  .projectUl {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+  }
+}
+@media screen and (max-width: 771px) {
+  .mainContainer {
+    position: relative;
+  }
+  .HeadLogoNav {
+    flex-direction: column;
+    position: relative;
+  }
+  .HeadLogoNav .navBar ul {
+    flex-direction: column;
+    position: absolute;
+    background: linear-gradient(45deg, rgb(111, 165, 183), #fff);
+    padding: 10px 5px;
+    height: 50vh;
+    right: 0px;
+    top: 0px;
+    width: 0px;
+    z-index: 1;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  .HeadLogoNav .menu,
+  .HeadLogoNav .close {
+    display: block;
+    position: absolute;
+  }
+  .HeadLogoNav .menu {
+    right: 20px;
+    top: 15px;
+  }
+  .HeadLogoNav .close {
+    right: 20px;
+    top: 15px;
+    z-index: 1;
+    color: #000;
+  }
+  .HeadLogoNav .navBar ul li {
+    margin-bottom: 10px;
+  }
+  .sentencePhoto {
+    flex-direction: column-reverse;
+    padding-top: 5px;
+  }
+  .sentencePhoto .MyImg {
+    width: 202px;
+  }
+  .sentencePhoto .sentence {
+    font-size: 1rem;
+  }
+  .sentencePhoto {
+    margin-top: 60px;
+    gap: 55px;
+  }
+}
+@media screen and (max-width: 642px) {
+  .AboutMeMain .AboutMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .AboutMeMain .AboutMe .aboutImage {
+    margin-bottom: 25px;
+  }
+  .AboutMeMain .AboutMe .aboutImage img {
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px gray;
+  }
+  .AboutMeMain .AboutMe .aboutDiscripton {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 349px) {
+  .mainContainer .sentencePhoto .sentence h1 {
+    font-size: 1.4rem;
+  }
+  .mainContainer .sentencePhoto .sentence .p1 {
+    font-size: 1rem;
+  }
+  .mainContainer .sentencePhoto .sentence .p2 {
+    font-size: 1rem;
+  }
+  .mainContainer .sentencePhoto .sentence .p2 strong {
+    font-size: 1.5rem;
+  }
+  .footerMain .email strong {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+SPA
+Front:-
+1. Navbar
+Name
+Home - front page
+Projects
+Skills
+About
+Contact
+------
+Hello, My name is Sufiyan Shaikh and
+I am a web developer.
+More About me. 
+Photo - Right Side
+2.
