@@ -372,19 +372,22 @@ $blueV: blueviolet;
   }
   .HeadLogoNav {
     flex-direction: column;
-    position: relative;
+    position: fixed;
     .navBar ul {
       flex-direction: column;
       position: absolute;
       background: linear-gradient(45deg, $bgColor, #fff);
       padding: 10px 5px;
       height: 50vh;
-      right: 0px;
+      right: -100%;
       top: 0px;
-      width: 0px;
+      width: 220px;
       z-index: 1;
       overflow: hidden;
-      visibility: hidden;
+      transition: right 0.4s ease-in-out;
+      &.ulactive {
+        right: 0;
+      }
     }
     .menu,
     .close {
@@ -416,7 +419,7 @@ $blueV: blueviolet;
     font-size: 1rem;
   }
   .sentencePhoto {
-    margin-top: 60px;
+    padding-top: 60px;
     gap: 55px;
   }
 }

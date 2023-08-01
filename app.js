@@ -1,18 +1,12 @@
-const navBar = document.querySelector(".navBar ul");
-const menuOpen = document.querySelector(".menu");
-const closeOpen = document.querySelector(".close");
+let navBar = document.querySelector(".navBar ul");
 
-menuOpen.addEventListener("click", () => {
-  navBar.style.width = "220px";
-  navBar.style.visibility = "visible";
-  navBar.style.transition = "0.4s ease-in-out";
-});
+document.querySelector("#openNav").onclick = () => {
+  navBar.classList.add("ulactive");
+};
 
-closeOpen.addEventListener("click", () => {
-  navBar.style.width = "0px";
-  navBar.style.visibility = "hidden";
-  navBar.style.transition = "0.4s ease-in-out";
-});
+document.querySelector("#closeNav").onclick = () => {
+  navBar.classList.remove("ulactive");
+};
 
 /* My Projects */
 
