@@ -75,10 +75,26 @@ $blueV: blueviolet;
       padding: 2px 10px;
       border-radius: 5px;
       transition: background-color 0.3s ease-in-out;
-    }
-    a:hover {
-      color: $blueV;
       font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease-in-out;
+      &::after {
+        content: "";
+        width: 0;
+        height: 0.07rem;
+        background-color: $blueV;
+        position: absolute;
+        bottom: 0px;
+        left: 10px;
+        margin-top: 3px;
+        transition: width 0.5s ease-in-out;
+      }
+      &:hover::after {
+        width: 50%;
+      }
+      &:hover {
+        color: $blueV;
+      }
     }
   }
 }
