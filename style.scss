@@ -167,13 +167,13 @@ $blueV: blueviolet;
   }
 }
 .MyImg {
-  width: 300px;
-  overflow: hidden;
-  border-radius: 50%;
-  border: 2px solid rebeccapurple;
+  width: 250px;
+  position: relative;
   img {
+    border: 2px solid rebeccapurple;
+    border-radius: 30px;
     width: 100%;
-    transform: scale(1.5);
+    box-shadow: 0px 15px 25px #0000005f;
   }
 }
 .HeadLogoNav .menu,
