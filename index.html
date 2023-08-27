@@ -57,7 +57,7 @@
             <a href="#AboutId">
               <button>More about me</button>
             </a>
-            <a class="cvlink" href="Shaikh Sufiyan_Resume.pdf" download
+            <a class="cvlink" href="Shaikh Sufiyan__Resume.pdf" download
               >Download Resume <i class="fa-solid fa-download"></i
             ></a>
           </div>
@@ -289,6 +289,9 @@
         <img src="images/Unofficial_JavaScript_logo_2.svg" width="200" alt="" />
       </div>
       <div class="imageSkill hidden">
+        <img src="images/React-icon.svg" width="200" alt="" />
+      </div>
+      <div class="imageSkill hidden">
         <img src="images/sass logo.svg" width="200" alt="" />
       </div>
     </div>
@@ -298,16 +301,13 @@
 
     <div class="AboutMeMain">
       <div class="AboutMe">
-        <div class="aboutImage">
-          <img src="images/Img.jpg" width="200" alt="" />
-        </div>
         <div class="aboutDiscripton">
           <p>
-            I completed my BSc in computer science from Shankar Narayan College
-            in 2023. My Key skills are HTML, CSS, SASS, and JavaScript. I made
-            wonderful projects which I mention in my portfolio website and some
-            are on my resume also. Right know I am learning JavaScript
-            frameworks and libraries.
+            My name is Shaikh Sufiyan, I am from Mumbai, I completed my BSc in
+            computer science from Shankar Narayan College in 2023. My Key skills
+            are HTML, CSS, JavaScript, React JS and SASS. I builded wonderful
+            projects which I mentioned in my portfolio website and some are on
+            my resume also.
             <br />
             My hobbies are reading articles which are based on technology and
             science, and I also like to play volleyball.
@@ -315,8 +315,11 @@
             <br />
             <b>Certificates: -</b>
             <br /><br />
-            JavaScript from Scaler Academy
+            React Js from Internshala
             <br /><br />
+            JavaScript from Scaler Academy
+            <br />
+            <br />
             CSS from Great Learning
             <br />
             <br />
@@ -336,9 +339,42 @@
       </div>
     </div>
 
+    <!-- Contact -->
+
+    <div class="mainContact" id="ContactId">
+      <p class="Cftitle">Contact Form</p>
+      <form
+        action="https://formspree.io/f/mqkvqkjn"
+        method="POST"
+        onsubmit="return validateEmail()"
+      >
+        <input type="text" name="Name" placeholder="Name" required />
+
+        <input
+          type="email"
+          id="email"
+          name="Email"
+          placeholder="Email"
+          onkeyup="validateEmail()"
+          required
+        />
+        <span id="emialError"></span>
+        <input type="text" name="Subject" placeholder="Subject" required />
+
+        <textarea
+          name="Message"
+          cols="30"
+          rows="10"
+          placeholder="Message"
+        ></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
     <!-- Footer  -->
 
-    <div class="footerMain" id="ContactId">
+    <div class="footerMain">
       <div class="contacticons">
         <a target="_blank" href="https://github.com/Sufiyan055">
           <i class="fa-brands fa-github"></i>

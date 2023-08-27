@@ -1,4 +1,9 @@
 let navBar = document.querySelector(".navBar ul");
+const tabsBox = document.querySelector(".projectUl");
+allTabs = document.querySelectorAll(".tab");
+arrowIcons = document.querySelectorAll(".icon span");
+const email = document.getElementById("email");
+const emialError = document.getElementById("emialError");
 
 document.querySelector("#openNav").onclick = () => {
   navBar.classList.add("ulactive");
@@ -9,10 +14,6 @@ document.querySelector("#closeNav").onclick = () => {
 };
 
 /* My Projects */
-
-const tabsBox = document.querySelector(".projectUl");
-allTabs = document.querySelectorAll(".tab");
-arrowIcons = document.querySelectorAll(".icon span");
 
 let isDragging = false;
 
@@ -59,3 +60,15 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
+
+/* Contact form */
+
+function validateEmail() {
+  if (!email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+    emialError.style.display = "block";
+    emialError.innerHTML = "<b>*Please enter a valid email</b>";
+    return false;
+  }
+  emialError.innerHTML = "";
+  return true;
+}
