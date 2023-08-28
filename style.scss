@@ -41,8 +41,8 @@ $blueV: blueviolet;
   align-items: center;
   justify-content: space-between;
   padding: 5px 20px;
-  border-bottom: 1px solid $blueV;
   position: fixed;
+  box-shadow: 0px 0px 10px 0px black;
   width: 100%;
   top: 0px;
   z-index: 1;
@@ -186,7 +186,7 @@ $blueV: blueviolet;
 }
 .project {
   @include flexCenter();
-  padding: 0 10px;
+  padding: 0 2px;
   margin-top: 80px;
   .icon span {
     cursor: pointer;
@@ -342,7 +342,7 @@ $blueV: blueviolet;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 55px 5px;
+  margin-top: 30px;
   padding: 15px;
   background: rgba(111, 165, 183, 0.621);
   .Cftitle {
@@ -356,6 +356,7 @@ $blueV: blueviolet;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 30px 5px;
     gap: 15px;
     width: 70vmin;
   }
@@ -451,6 +452,8 @@ $blueV: blueviolet;
       right: -100%;
       top: 0px;
       width: 220px;
+      border-bottom-left-radius: 15px;
+      box-shadow: 0px 0px 15px 1px grey;
       z-index: 1;
       overflow: hidden;
       transition: right 0.4s ease-in-out;
