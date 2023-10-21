@@ -21,7 +21,7 @@
 
 .mainContainer {
   height: 46.2rem;
-  background: radial-gradient(rgb(111, 165, 183), #fff);
+  background: radial-gradient(#fff, lightskyblue);
   margin-top: 0px;
 }
 
@@ -36,7 +36,7 @@
   width: 100%;
   top: 0px;
   z-index: 1;
-  background: rgb(111, 165, 183);
+  background: lightskyblue;
 }
 .HeadLogoNav .head {
   display: flex;
@@ -276,7 +276,7 @@
   align-items: center;
   flex-wrap: wrap;
   min-height: 30rem;
-  background-color: rgb(111, 165, 183);
+  background-color: lightskyblue;
 }
 .SkillsMain .imageSkill {
   width: 160px;
@@ -358,7 +358,7 @@
   flex-direction: column;
   margin-top: 30px;
   padding: 15px;
-  background: rgba(111, 165, 183, 0.621);
+  background: lightskyblue;
 }
 .mainContact .Cftitle {
   font-size: 1.7rem;
@@ -414,7 +414,7 @@
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  background-color: rgba(145, 179, 179, 0.308);
+  background-color: #232323;
 }
 .footerMain .contacticons {
   margin: 10px 2px;
@@ -440,6 +440,7 @@
   margin: 5px 10px;
   font-size: 1.5rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #fff;
 }
 
 /*--------------- Media Query For small devices ---------------*/
@@ -465,7 +466,7 @@
   .HeadLogoNav .navBar ul {
     flex-direction: column;
     position: absolute;
-    background: linear-gradient(45deg, rgb(111, 165, 183), #fff);
+    background: linear-gradient(45deg, lightskyblue, #fff);
     padding: 10px 5px;
     height: 50vh;
     right: -100%;

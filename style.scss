@@ -4,7 +4,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-$bgColor: rgb(111, 165, 183);
+$bgColor: lightskyblue;
 $blueV: blueviolet;
 
 @mixin flexCenter {
@@ -32,7 +32,7 @@ $blueV: blueviolet;
 
 .mainContainer {
   height: 46.2rem;
-  background: radial-gradient($bgColor, #fff);
+  background: radial-gradient(#fff, lightskyblue);
   margin-top: 0px;
 }
 .HeadLogoNav {
@@ -344,7 +344,7 @@ $blueV: blueviolet;
   flex-direction: column;
   margin-top: 30px;
   padding: 15px;
-  background: rgba(111, 165, 183, 0.621);
+  background: $bgColor;
   .Cftitle {
     font-size: 1.7rem;
     font-family: sans-serif;
@@ -396,7 +396,7 @@ $blueV: blueviolet;
   min-height: 15rem;
   @include flexCenter();
   flex-flow: column;
-  background-color: rgba(145, 179, 179, 0.308);
+  background-color: #232323;
   .contacticons {
     margin: 10px 2px;
     display: flex;
@@ -421,6 +421,7 @@ $blueV: blueviolet;
     margin: 5px 10px;
     font-size: 1.5rem;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #fff;
   }
 }
 
