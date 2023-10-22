@@ -177,98 +177,196 @@
 }
 
 /* My Projects */
-.projectMain {
-  height: 37rem;
-}
-
-.project {
-  display: flex;
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: 25px;
+  margin: 20px 50px;
+  padding: 20px;
   justify-content: center;
-  align-items: center;
-  padding: 0 2px;
-  margin-top: 80px;
 }
-.project .icon span {
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+.projects-container .projects {
+  padding: 8px;
+  border-radius: 12px;
 }
-
-.projectUl::-webkit-scrollbar {
-  width: 0px;
-}
-
-.projectUl {
-  display: flex;
-  gap: 12px;
-  list-style: none;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  font-family: sans-serif;
-}
-.projectUl .tab {
-  margin: 5px 10px;
-  min-height: 20rem;
-  border: 1px solid rebeccapurple;
-  padding: 5px;
-  border-radius: 8px;
-}
-.projectUl .tab .Image {
-  width: 300px;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.562);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.projectUl .tab .Image img {
-  width: 100%;
-  border-radius: 8px;
-}
-.projectUl .tab .titleP {
+.projects-container .projects h2 {
   text-align: center;
-  margin: 10px 2px;
-  font-size: 1.5rem;
+  margin: 5px;
+  font-family: sans-serif;
+  text-decoration: underline;
+  font-weight: 300;
 }
-.projectUl .tab .aBtnP {
+.projects-container .projects .btns {
+  margin: 10px 5px 5px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column;
-  margin: 5px 2px;
+  gap: 15px;
 }
-.projectUl .tab .aBtnP a {
-  text-decoration: none;
-  border: 1px solid #000;
-  border-radius: 2px;
-  padding: 3px 6px;
-  color: #000;
+.projects-container .projects .btns button {
+  padding: 2px 5px;
   background-color: #fff;
-  transition: 0.3s ease-in-out;
+  outline: none;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
-.projectUl .tab .aBtnP a:hover {
-  background-color: rebeccapurple;
-  border: 1px solid #fff;
+.projects-container .projects .btns button a {
+  text-decoration: none;
+  color: #000;
+}
+.projects-container .projects .btns button a:hover {
   color: #fff;
 }
-.projectUl .tab .discription {
-  margin-top: 10px;
+.projects-container .projects .btns button:hover {
+  box-shadow: 0 0 2px #000;
+  color: #fff;
+  background-color: rebeccapurple;
+}
+.projects-container .projects .image {
+  border: 1px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 5px #000;
+  padding: 5px;
+}
+.projects-container .projects .image img {
+  width: 100%;
 }
 
-.projectUl.dragging {
-  scroll-behavior: auto;
-  cursor: grab;
+/* Project Preview */
+.project-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 111;
+}
+.project-preview .preview {
+  padding: 1rem;
+  background: #fff;
+  position: relative;
+  width: 60rem;
+  height: 28rem;
+  display: none;
+}
+.project-preview .preview .fa-x {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  background-color: orange;
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 5px 7px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.project-preview .preview .fa-x:hover {
+  color: red;
+  box-shadow: 0 0 2px #000;
+}
+.project-preview .preview .subdesc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+  border: 1px solid #000;
+  padding: 15px;
+}
+.project-preview .preview .subdesc .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+}
+.project-preview .preview .subdesc .image img {
+  width: 100%;
+  border: 1px solid #000;
+}
+.project-preview .preview .subdesc .image button {
+  margin: 15px 3px 8px 3px;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid #000;
+  background: #fff;
+  padding: 3px 5px;
+  transition: 0.2s ease-in-out;
+}
+.project-preview .preview .subdesc .image button a {
+  padding: 5px 9px;
+  color: #000;
+  text-decoration: none;
+}
+.project-preview .preview .subdesc .image button a:hover {
+  color: #fff;
+}
+.project-preview .preview .subdesc .image button:hover {
+  box-shadow: 0 0 2px #000;
+  background-color: rebeccapurple;
+  border: none;
+}
+.project-preview .preview .subdesc .image img {
+  width: 100%;
+}
+.project-preview .preview .subdesc p {
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  width: 60%;
+}
+.project-preview .preview.active {
+  display: inline-block;
 }
 
-.projectUl.dragging .tab {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  pointer-events: none;
+@media screen and (max-width: 1205px) {
+  .project-preview .preview {
+    margin: 15px;
+    height: 90vh;
+    width: 80%;
+  }
+  .project-preview .preview .subdesc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  .project-preview .preview .subdesc .image {
+    width: 400px;
+  }
+  .project-preview .preview .subdesc .image img {
+    width: 100%;
+    height: 100%;
+  }
+  .project-preview .preview .subdesc p {
+    width: 100%;
+  }
 }
-
+@media screen and (max-width: 673px) {
+  .project-preview .preview .subdesc .image {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 527px) {
+  .project-preview .preview .subdesc .image {
+    width: 255px;
+  }
+}
+@media screen and (max-width: 371px) {
+  .project-preview .preview .subdesc .image {
+    width: 205px;
+  }
+}
 /* My Skills */
 .SkillsMain {
   display: flex;

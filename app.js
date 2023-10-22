@@ -4,6 +4,8 @@ allTabs = document.querySelectorAll(".tab");
 arrowIcons = document.querySelectorAll(".icon span");
 const email = document.getElementById("email");
 const emialError = document.getElementById("emialError");
+let projectPreview = document.querySelector(".project-preview");
+let previewBox = document.querySelectorAll(".preview");
 
 document.querySelector("#openNav").onclick = () => {
   navBar.classList.add("ulactive");
@@ -15,38 +17,27 @@ document.querySelector("#closeNav").onclick = () => {
 
 /* My Projects */
 
-let isDragging = false;
-
-const handleIcons = () => {
-  let scrollVal = Math.round(tabsBox.scrollLeft);
-  let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth;
-  arrowIcons[0].parentElement.style.display = scrollVal > 0 ? "flex" : "none";
-  arrowIcons[1].parentElement.style.display =
-    maxScrollableWidth > scrollVal ? "flex" : "none";
-};
-
-arrowIcons.forEach((icon) => {
-  icon.addEventListener("click", () => {
-    tabsBox.scrollLeft += icon.id === "left" ? -350 : 350;
-    setTimeout(() => handleIcons(), 50);
-  });
+/* Open Popup */
+document.querySelectorAll(".projects-container .btnname").forEach((project) => {
+  project.onclick = () => {
+    projectPreview.style.display = "flex";
+    let name = project.getAttribute("data-name");
+    previewBox.forEach((preview) => {
+      let target = preview.getAttribute("data-target");
+      if (name == target) {
+        preview.classList.add("active");
+      }
+    });
+  };
 });
 
-const dragging = (e) => {
-  if (!isDragging) return;
-  tabsBox.classList.add("dragging");
-  tabsBox.scrollLeft -= e.movementX;
-  handleIcons();
-};
-
-const dragStop = () => {
-  isDragging = false;
-  tabsBox.classList.remove("dragging");
-};
-
-tabsBox.addEventListener("mousedown", () => (isDragging = true));
-tabsBox.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
+/* Close Popup */
+previewBox.forEach((close) => {
+  close.querySelector(".fa-x").onclick = () => {
+    close.classList.remove("active");
+    projectPreview.style.display = "none";
+  };
+});
 
 /* Animation on Scroll in My Skill section */
 
