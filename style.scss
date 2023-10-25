@@ -276,13 +276,14 @@ $blueV: blueviolet;
     .fa-x {
       position: absolute;
       top: 25px;
-      right: 35px;
+      right: 25px;
       background-color: orange;
       color: #fff;
       border: 1px solid #000;
       border-radius: 50%;
       padding: 5px 7px;
       transition: 0.2s ease-in-out;
+      z-index: 1;
       cursor: pointer;
       &:hover {
         color: red;
@@ -359,7 +360,6 @@ $blueV: blueviolet;
         flex-direction: column;
         overflow: hidden;
         overflow-y: scroll;
-
         .image {
           width: 400px;
           img {
@@ -636,7 +636,7 @@ $blueV: blueviolet;
     font-size: 1rem;
   }
   .sentencePhoto {
-    padding-top: 126px;
+    padding-top: 90px;
     gap: 55px;
   }
 }
