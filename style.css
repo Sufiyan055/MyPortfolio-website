@@ -165,7 +165,6 @@
   position: relative;
 }
 .MyImg img {
-  border: 2px solid rebeccapurple;
   border-radius: 15px 40px 15px 40px;
   width: 100%;
   z-index: 1;
