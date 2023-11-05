@@ -7,7 +7,5 @@ The website not only functions as a showcase of my work but also offers a stream
 
 Technologies:
 HTML
-
 SASS
-
 JavaScript
