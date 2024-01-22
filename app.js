@@ -7,13 +7,13 @@ const emialError = document.getElementById("emialError");
 let projectPreview = document.querySelector(".project-preview");
 let previewBox = document.querySelectorAll(".preview");
 
-document.querySelector("#openNav").onclick = () => {
-  navBar.classList.add("ulactive");
-};
+/* document.querySelector("#openNav").onclick = () => {
+  navBar.classList.toggle("ulactive");
+}; */
 
-document.querySelector("#closeNav").onclick = () => {
+/* document.querySelector("#closeNav").onclick = () => {
   navBar.classList.remove("ulactive");
-};
+}; */
 
 /* My Projects */
 

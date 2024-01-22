@@ -70,6 +70,9 @@
   position: relative;
   transition: color 0.3s ease-in-out;
 }
+.HeadLogoNav .navBar ul a i {
+  display: none;
+}
 .HeadLogoNav .navBar ul a::after {
   content: "";
   width: 0;
@@ -555,8 +558,49 @@
   color: #fff;
 }
 
+/* Small Size Navbar */
+.smallSize {
+  display: none;
+}
+
 /*--------------- Media Query For small devices ---------------*/
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 771px) {
+  .smallSize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 111;
+    position: fixed;
+    bottom: 5px;
+    width: 100vw;
+  }
+  .smallSize ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 15px;
+    gap: 20px;
+    width: 90%;
+    background: lightskyblue;
+    box-shadow: 0px 0px 15px 1px #000;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  .smallSize ul li {
+    text-decoration: none;
+    list-style: none;
+  }
+  .smallSize ul li a {
+    padding: 7px 8px;
+    border-radius: 50%;
+    color: #000;
+  }
+  .smallSize ul li a:hover {
+    color: #fff;
+    background-color: blueviolet;
+    box-shadow: 0px 0px 7px 2px #000;
+  }
   .mainContainer {
     width: 100%;
     height: 100vh;
@@ -568,45 +612,40 @@
   }
 }
 @media screen and (max-width: 771px) {
-  .mainContainer {
-    position: relative;
-  }
   .HeadLogoNav {
     flex-direction: column;
-    position: fixed;
+    /* .menu,
+    .close {
+      display: block;
+      position: absolute;
+    }
+    .menu {
+      right: 20px;
+      top: 15px;
+    }
+    .close {
+      right: 20px;
+      top: -5px;
+      z-index: 1;
+      color: #000;
+      background-color: red;
+    } */
   }
   .HeadLogoNav .navBar ul {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     position: absolute;
     background: linear-gradient(45deg, lightskyblue, #fff);
     padding: 10px 5px;
-    height: 50vh;
-    right: -100%;
-    top: 0px;
-    width: 220px;
+    height: 10vw;
+    right: -900%;
+    width: 100%;
     border-bottom-left-radius: 15px;
-    box-shadow: 0px 0px 15px 1px grey;
-    z-index: 1;
     overflow: hidden;
-    transition: right 0.4s ease-in-out;
+    transition: top 0.4s ease-in-out;
   }
   .HeadLogoNav .navBar ul.ulactive {
-    right: 0;
-  }
-  .HeadLogoNav .menu,
-  .HeadLogoNav .close {
-    display: block;
-    position: absolute;
-  }
-  .HeadLogoNav .menu {
-    right: 20px;
-    top: 15px;
-  }
-  .HeadLogoNav .close {
-    right: 20px;
-    top: 15px;
-    z-index: 1;
-    color: #000;
+    top: 45px;
   }
   .HeadLogoNav .navBar ul li {
     margin-bottom: 10px;
@@ -675,5 +714,10 @@
   }
   .footerMain .email strong {
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 299px) {
+  .smallSize ul {
+    gap: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
