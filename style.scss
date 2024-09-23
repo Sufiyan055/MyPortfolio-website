@@ -32,7 +32,10 @@ $blueV: blueviolet;
 
 .mainContainer {
   height: 46.2rem;
-  background: radial-gradient(#fff, lightskyblue);
+  background-image: url(images/header-bg-color.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-top: 0px;
 }
 .HeadLogoNav {
@@ -46,7 +49,10 @@ $blueV: blueviolet;
   width: 100%;
   top: 0px;
   z-index: 111;
-  background: $bgColor;
+  background: url(images/header-bg-color.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   .head {
     display: flex;
     justify-content: center;
@@ -56,7 +62,7 @@ $blueV: blueviolet;
     font-family: sans-serif;
   }
   .head h1:nth-child(2) {
-    color: #fff;
+    color: #97d3f6;
     font-family: sans-serif;
   }
   .navBar ul {
@@ -104,12 +110,12 @@ $blueV: blueviolet;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 105px;
+  flex-direction: column-reverse;
+  gap: 25px;
   padding-top: 150px;
 }
 .sentence {
-  padding: 10px;
+  padding: 5px;
   .p1 {
     font-family: sans-serif;
   }
@@ -117,12 +123,10 @@ $blueV: blueviolet;
     font-size: 3rem;
     font-family: "Roboto", sans-serif;
     color: rebeccapurple;
-    margin: 5px 3px;
   }
   .p2 {
     font-size: 1.5rem;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    margin: 3px 2px;
     strong {
       font-size: 2rem;
       text-decoration: underline rebeccapurple 1.5px;
@@ -169,26 +173,26 @@ $blueV: blueviolet;
   }
 }
 .MyImg {
-  width: 250px;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  overflow: hidden;
   position: relative;
   img {
     border-radius: 15px 40px 15px 40px;
     width: 100%;
-    z-index: 1;
-    position: relative;
     box-shadow: 0px 0px 9px #000;
+    object-fit: contain;
   }
-  &::before {
+  /*  &::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rebeccapurple;
     top: -26px;
     right: -35px;
     border-radius: 15px 40px 15px 40px;
-    box-shadow: 2px 2px 15px #000;
-  }
+  } */
 }
 .HeadLogoNav .menu,
 .navBar .close {
@@ -490,7 +494,7 @@ $blueV: blueviolet;
   flex-direction: column;
   margin-top: 30px;
   padding: 15px;
-  background: $bgColor;
+  background: #86d9ff;
   .Cftitle {
     font-size: 1.7rem;
     font-family: sans-serif;
@@ -542,7 +546,7 @@ $blueV: blueviolet;
   min-height: 15rem;
   @include flexCenter();
   flex-flow: column;
-  background-color: #232323;
+  background-color: #291a51;
   .contacticons {
     margin: 10px 2px;
     display: flex;
@@ -695,6 +699,12 @@ $blueV: blueviolet;
         font-size: 1.1rem;
       }
     }
+  }
+}
+
+@media screen and (max-width: 461px) {
+  .mainContact {
+    padding: 5px;
   }
 }
 
