@@ -7,9 +7,9 @@ const emialError = document.getElementById("emialError");
 let projectPreview = document.querySelector(".project-preview");
 let previewBox = document.querySelectorAll(".preview");
 
-/* document.querySelector("#openNav").onclick = () => {
+function toggleNav() {
   navBar.classList.toggle("ulactive");
-}; */
+}
 
 /* document.querySelector("#closeNav").onclick = () => {
   navBar.classList.remove("ulactive");

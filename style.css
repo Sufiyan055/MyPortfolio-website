@@ -135,6 +135,7 @@
 .sentence .aboutCV {
   margin: 5px 2px;
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
 }
 .sentence .aboutCV button {
@@ -173,15 +174,6 @@
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  /*  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: -26px;
-    right: -35px;
-    border-radius: 15px 40px 15px 40px;
-  } */
 }
 .MyImg img {
   border-radius: 15px 40px 15px 40px;
@@ -391,12 +383,16 @@
 }
 /* My Skills */
 .SkillsMain {
+  background: linear-gradient(185deg, rgba(0, 0, 0, 0.5137254902), rgba(0, 0, 0, 0.3647058824)), url(images/BgImage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   min-height: 30rem;
-  background-color: lightskyblue;
 }
 .SkillsMain .imageSkill {
   width: 160px;
@@ -472,20 +468,28 @@
 
 /* Contact Form */
 .mainContact {
+  background: linear-gradient(185deg, rgba(0, 0, 0, 0.231372549), rgba(0, 0, 0, 0.3647058824)), url(images/setupBg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 30px;
   padding: 15px;
-  background: #86d9ff;
 }
 .mainContact .Cftitle {
   font-size: 1.7rem;
   font-family: sans-serif;
   color: rebeccapurple;
+  font-weight: bolder;
   border-bottom: 1px solid rebeccapurple;
   margin-bottom: 25px;
+  background-color: rgba(255, 255, 255, 0.4705882353);
+  padding: 5px 15px;
+  border-radius: 5px;
 }
 .mainContact form {
   display: flex;
@@ -508,6 +512,7 @@
   overflow-y: scroll;
   border-radius: 0;
   font-family: sans-serif;
+  border-radius: 7px;
 }
 .mainContact button {
   background: #fff;
@@ -529,12 +534,15 @@
 
 /* footer */
 .footerMain {
+  background-image: url(images/header-bg-color.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 15rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  background-color: #291a51;
 }
 .footerMain .contacticons {
   margin: 10px 2px;
@@ -546,26 +554,30 @@
   font-size: 1.9rem;
   margin: 2px 6px;
   padding: 2px 5px;
-  background-color: #fff;
   border-radius: 4px;
+  cursor: pointer;
   transition: 0.3s ease-in-out;
   cursor: pointer;
 }
-.footerMain .contacticons a:hover {
-  background-color: lightblue;
-  color: #000;
+.footerMain .contacticons a:nth-child(1):hover {
+  color: rebeccapurple;
+  transform: scale(1.3);
+}
+.footerMain .contacticons a:nth-child(2):hover {
+  color: rgb(12, 143, 231);
+  transform: scale(1.3);
+}
+.footerMain .contacticons a:nth-child(3):hover {
+  color: rgb(12, 81, 231);
+  transform: scale(1.3);
 }
 .footerMain .email,
 .footerMain .Thanks {
   margin: 5px 10px;
   font-size: 1.5rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: #fff;
-}
-
-/* Small Size Navbar */
-.smallSize {
-  display: none;
+  color: #000;
+  word-wrap: break-word;
 }
 
 /*--------------- Media Query For small devices ---------------*/
@@ -620,41 +632,38 @@
 @media screen and (max-width: 771px) {
   .HeadLogoNav {
     flex-direction: column;
-    /* .menu,
-    .close {
-      display: block;
-      position: absolute;
-    }
-    .menu {
-      right: 20px;
-      top: 15px;
-    }
-    .close {
-      right: 20px;
-      top: -5px;
-      z-index: 1;
-      color: #000;
-      background-color: red;
-    } */
   }
   .HeadLogoNav .navBar ul {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     position: absolute;
-    background: linear-gradient(45deg, lightskyblue, #fff);
-    padding: 10px 5px;
-    height: 10vw;
-    right: -900%;
-    width: 100%;
-    border-bottom-left-radius: 15px;
+    background: url(images/header-bg-color.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 19px 5px;
+    height: 280px;
+    right: 0px;
+    width: 220px;
+    top: -355px;
+    right: 40px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.3176470588);
     overflow: hidden;
-    transition: top 0.4s ease-in-out;
-  }
-  .HeadLogoNav .navBar ul.ulactive {
-    top: 45px;
+    transition: top 0.3s;
   }
   .HeadLogoNav .navBar ul li {
-    margin-bottom: 10px;
+    padding: 5px 0px;
+  }
+  .HeadLogoNav .navBar ul.ulactive {
+    top: 60px;
+  }
+  .HeadLogoNav .menu {
+    display: block;
+    position: absolute;
+  }
+  .HeadLogoNav .menu {
+    right: 20px;
+    top: 15px;
   }
   .sentencePhoto {
     flex-direction: column-reverse;
@@ -695,6 +704,9 @@
   .mainContact {
     padding: 5px;
   }
+  .mainContact form {
+    width: 90vw;
+  }
 }
 @media screen and (max-width: 361px) {
   .SkillsMain {
@@ -723,12 +735,30 @@
   .mainContainer .sentencePhoto .sentence .p2 strong {
     font-size: 1.5rem;
   }
-  .footerMain .email strong {
+  .footerMain .email a {
     font-size: 1.2rem;
   }
 }
-@media screen and (max-width: 299px) {
-  .smallSize ul {
-    gap: 15px;
+@media screen and (max-width: 296px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  }
+  .SkillsMain .imageSkill {
+    width: 80px;
+    height: 80px;
+  }
+  .SkillsMain .imageSkill img {
+    width: 90%;
+    height: 90%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .footerMain .email {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 270px) {
+  .mainContainer .HeadLogoNav .navBar ul {
+    width: 150px;
   }
 }/*# sourceMappingURL=style.css.map */

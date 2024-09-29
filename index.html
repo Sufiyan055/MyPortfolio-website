@@ -24,28 +24,6 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <div class="smallSize">
-      <ul>
-        <!-- <span class="material-symbols-outlined close" id="closeNav">
-          close
-        </span> -->
-        <li>
-          <a href="#mainContainer"><i class="fa-solid fa-house"></i></a>
-        </li>
-        <li>
-          <a href="#ProjectsId"><i class="fa-solid fa-file-code"></i></a>
-        </li>
-        <li>
-          <a href="#SkillsId"><i class="fa-solid fa-code"></i></a>
-        </li>
-        <li>
-          <a href="#AboutId"><i class="fa-solid fa-user"></i></a>
-        </li>
-        <li>
-          <a href="#ContactId"><i class="fa-solid fa-phone"></i></a>
-        </li>
-      </ul>
-    </div>
     <div class="mainContainer" id="mainContainer">
       <div class="HeadLogoNav" id="HeadLogoId">
         <div class="head">
@@ -53,26 +31,29 @@
           <h1>folio</h1>
         </div>
 
-        <!-- <span class="material-symbols-outlined menu" id="openNav"> menu </span> -->
+        <span
+          class="material-symbols-outlined menu"
+          id="openNav"
+          onclick="toggleNav()"
+        >
+          menu
+        </span>
         <div class="navBar">
           <ul>
-            <!-- <span class="material-symbols-outlined close" id="closeNav">
-              close
-            </span> -->
             <li>
-              <a href="#mainContainer">Home</a>
+              <a href="#mainContainer" onclick="toggleNav()">Home</a>
             </li>
             <li>
-              <a href="#ProjectsId">Projects</a>
+              <a href="#ProjectsId" onclick="toggleNav()">Projects</a>
             </li>
             <li>
-              <a href="#SkillsId">Skills</a>
+              <a href="#SkillsId" onclick="toggleNav()">Skills</a>
             </li>
             <li>
-              <a href="#AboutId">About Me</a>
+              <a href="#AboutId" onclick="toggleNav()">About Me</a>
             </li>
             <li>
-              <a href="#ContactId">Contact</a>
+              <a href="#ContactId" onclick="toggleNav()">Contact</a>
             </li>
           </ul>
         </div>
@@ -464,7 +445,9 @@
             <br />
             <b>Email Id</b>
             <br />
-            sufiyan007882@gmail.com
+            <a href="mailto:sufiyan007882@gmail.com">
+              sufiyan007882@gmail.com
+            </a>
             <br />
             <br />
             <b>Education</b>
@@ -488,6 +471,12 @@
         onsubmit="return validateEmail()"
       >
         <input type="text" name="Name" placeholder="Name" required />
+        <input
+          type="number"
+          name="number"
+          placeholder="phone Number"
+          required
+        />
 
         <input
           type="email"
@@ -531,7 +520,9 @@
           <i class="fa-brands fa-linkedin"></i>
         </a>
       </div>
-      <div class="email"><strong>sufiyan007882@gmail.com</strong></div>
+      <div class="email">
+        <a href="mailto:sufiyan007882@gmail.com">sufiyan007882@gmail.com</a>
+      </div>
       <div class="Thanks">Thankyou! For visiting my Portfolio Website</div>
     </div>
 
