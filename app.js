@@ -9,6 +9,8 @@ let previewBox = document.querySelectorAll(".preview");
 
 function toggleNav() {
   navBar.classList.toggle("ulactive");
+  menuToggleid.classList.toggle("active");
+  mainNav.classList.toggle("activeNav");
 }
 
 /* document.querySelector("#closeNav").onclick = () => {
