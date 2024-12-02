@@ -6,16 +6,12 @@ const email = document.getElementById("email");
 const emialError = document.getElementById("emialError");
 let projectPreview = document.querySelector(".project-preview");
 let previewBox = document.querySelectorAll(".preview");
+let menuToggleid = document.getElementById("menuToggleid");
 
 function toggleNav() {
   navBar.classList.toggle("ulactive");
   menuToggleid.classList.toggle("active");
-  mainNav.classList.toggle("activeNav");
 }
-
-/* document.querySelector("#closeNav").onclick = () => {
-  navBar.classList.remove("ulactive");
-}; */
 
 /* My Projects */
 
