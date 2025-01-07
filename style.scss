@@ -139,7 +139,7 @@ $blueV: blueviolet;
     }
   }
   .p3 {
-    color: rgb(58, 56, 56);
+    color: rgb(163, 161, 161);
     font-size: 1.3rem;
     font-family: "Courier New", Courier, monospace;
     font-weight: 500;
@@ -507,8 +507,14 @@ $blueV: blueviolet;
 }
 /* About Me */
 
+.flexForAboutUs {
+  @include flexCenter();
+  flex-direction: column;
+  align-items: normal;
+}
+
 .AboutMeMain {
-  margin-top: 35px;
+  margin-top: 15px;
   min-height: 35rem;
   margin-left: 20px;
   margin-right: 20px;
@@ -528,6 +534,27 @@ $blueV: blueviolet;
     .aboutDiscripton {
       font-size: 1.2rem;
       font-family: sans-serif;
+      gap: 25px;
+      .aboutParagraph {
+        gap: 15px;
+        .experience {
+          text-transform: uppercase;
+          text-decoration: underline;
+        }
+        .smallPara {
+          gap: 5px;
+          border: 1px solid #fff;
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+      .mainCertificates {
+        gap: 15px;
+        .cerificateWord {
+          text-transform: uppercase;
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
